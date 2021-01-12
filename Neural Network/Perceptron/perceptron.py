@@ -23,7 +23,7 @@ class Perception:
                 linear_output = np.dot(x_i, self.weights)
                 y_predicted = activation_func(linear_output)
                 
-                update = (y_[idx] - y_predicted)
+                update = self.lr*(y_[idx] - y_predicted)
                 self.weights += update*x_i
                 self.bias += update
                 
