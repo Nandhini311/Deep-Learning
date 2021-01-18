@@ -15,3 +15,6 @@ def softmax(x):
 X = [2,1,0]
 ans = softmax(X)
 print(ans)
+
+
+'''Works on a vector. Takes a vector of k real values and returns a vector of k values to sum = 1 (probabilities)'''
