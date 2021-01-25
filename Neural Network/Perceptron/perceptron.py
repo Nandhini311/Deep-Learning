@@ -35,3 +35,9 @@ class Perception:
     
     def __unit_step_func(self, X):
         return np.where(x>=0,1,0)
+
+'''
+  perceptron - supervised machine learning domain for classification
+> weights are only classified for misqualified points
+   y - y_hat = 1 (+ve, blue point in red, moves line closer)
+   y - y_hat = -1 (-ve, red point in blue space, moves line farther)'''
