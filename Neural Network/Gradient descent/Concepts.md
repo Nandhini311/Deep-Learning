@@ -13,3 +13,7 @@ Here's the general algorithm for updating the weights with gradient descent:
    wieghts += learning rate* del_weights / n_records
    Here we're averaging the weight steps to help reduce any large variations in the training data.
 6.Repeat for ee epochs.
+
+
+weights are changed for every sample, if correctly classified lines moves father away, if 
+incorrectly classified, comes closer
