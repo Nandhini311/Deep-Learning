@@ -1,13 +1,12 @@
 Backward propogation is an extension of gradient descent
 #Calculate error term for hidden layer
-hidden_error_term = np.dot(output_error_term, weights_hidden_output) * \
-                    hidden_layer_output * (1 - hidden_layer_output)
-
+hidden_error = np.dot(output_error_term, weights_hidden_output)
+hidden_error_term = hidden_error * (1-hidden_error)
 #Calculate change in weights for hidden layer to output layer
-delta_w_h_o = learnrate * output_error_term * hidden_layer_output
+delta_w_h_o = output_error_term * hidden_layer_output
 
 #Calculate change in weights for input layer to hidden layer
-delta_w_i_h = learnrate * hidden_error_term * x[:, None]
+delta_w_i_h = hidden_error_term * x[:, None]
 
 concept :
     It is a supervised learning algorithm, for training multi-layer perceptrons.
